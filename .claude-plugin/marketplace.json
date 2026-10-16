@@ -1,15 +1,15 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "red-pen",
-  "description": "An editor's red pen for the docs PMs and founders share.",
+  "name": "product-os",
+  "description": "Skills for product and consulting work, with an editor's red pen built in.",
   "owner": {
     "name": "Sebastian Chavez",
     "url": "https://github.com/seb-chavez"
   },
   "plugins": [
     {
-      "name": "red-pen",
-      "description": "Short where prose runs long, detailed where engineers need detail.",
+      "name": "product-os",
+      "description": "Brainstorming, research, PRDs, review panels, meeting prep, and workspaces. Short where prose runs long, detailed where engineers need detail.",
       "source": "./",
       "category": "productivity"
     }

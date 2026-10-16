@@ -1,7 +1,7 @@
 {
-  "name": "red-pen",
-  "version": "0.1.0",
-  "description": "An editor's red pen for the docs PMs share. Cuts strategy prose to one page, keeps every fact, and never cuts the detail engineers need.",
+  "name": "product-os",
+  "version": "0.2.0",
+  "description": "Skills for product and consulting work: brainstorming, research, PRDs, review panels, meeting prep, and workspaces. Red Pen's writing rules are always on.",
   "author": {
     "name": "Sebastian Chavez",
     "url": "https://github.com/seb-chavez"
