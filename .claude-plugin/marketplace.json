@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "product-os",
+  "name": "builder-os",
   "description": "Skills for product and consulting work, with an editor's red pen built in.",
   "owner": {
     "name": "Sebastian Chavez",
@@ -8,7 +8,7 @@
   },
   "plugins": [
     {
-      "name": "product-os",
+      "name": "builder-os",
       "description": "Brainstorming, research, PRDs, review panels, meeting prep, and workspaces. Short where prose runs long, detailed where engineers need detail.",
       "source": "./",
       "category": "productivity"

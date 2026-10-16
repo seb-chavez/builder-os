@@ -60,7 +60,7 @@ class Plugin(unittest.TestCase):
             self.assertEqual(payload["hookEventName"], event)
             self.assertIn("The engineer test", payload["additionalContext"])
             # Only the main session gets the skill list.
-            self.assertEqual("# Using product-os" in payload["additionalContext"], event == "SessionStart")
+            self.assertEqual("# Using builder-os" in payload["additionalContext"], event == "SessionStart")
 
 
 SKILLS = ROOT / "skills"
@@ -79,18 +79,18 @@ class Skills(unittest.TestCase):
             self.assertTrue(meta["description"], f)
 
     def test_skill_lists_agree(self):
-        # using-product-os tells the agent what exists; README tells people. Both must list every skill.
-        names = {d.name for d in SKILLS.iterdir() if (d / "SKILL.md").exists()} - {"using-product-os"}
-        for doc in (SKILLS / "using-product-os" / "SKILL.md", ROOT / "README.md"):
+        # using-builder-os tells the agent what exists; README tells people. Both must list every skill.
+        names = {d.name for d in SKILLS.iterdir() if (d / "SKILL.md").exists()} - {"using-builder-os"}
+        for doc in (SKILLS / "using-builder-os" / "SKILL.md", ROOT / "README.md"):
             text = doc.read_text()
             self.assertEqual({n for n in names if f"`{n}`" not in text}, set(), doc.name)
 
     def test_linked_files_exist(self):
         import re
-        for f in list(SKILLS.rglob("*.md")) + [SKILLS / "using-product-os" / "SKILL.md"]:
+        for f in list(SKILLS.rglob("*.md")) + [SKILLS / "using-builder-os" / "SKILL.md"]:
             for target in re.findall(r"\]\(((?:\.\./|[\w-]+/)[^)#]+\.md)\)", f.read_text()):
                 self.assertTrue((f.parent / target).exists(), f"{f.relative_to(ROOT)} links missing {target}")
-        for t in re.findall(r"`(templates/[\w/-]+\.md)`", (SKILLS / "using-product-os" / "SKILL.md").read_text()):
+        for t in re.findall(r"`(templates/[\w/-]+\.md)`", (SKILLS / "using-builder-os" / "SKILL.md").read_text()):
             self.assertTrue((ROOT / t).exists(), t)
 
     def test_no_em_dashes(self):

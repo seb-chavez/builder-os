@@ -1,11 +1,11 @@
 ---
-name: using-product-os
-description: Use when starting any session, to know which product-os skills exist, how a workspace is laid out, and where documents go.
+name: using-builder-os
+description: Use when starting any session, to know which builder-os skills exist, how a workspace is laid out, and where documents go.
 ---
 
-# Using product-os
+# Using builder-os
 
-product-os is a set of skills for product and consulting work. When a request matches a skill below, use the skill instead of improvising. Red Pen's writing rules are always on.
+builder-os is a set of skills for product and consulting work. When a request matches a skill below, use the skill instead of improvising. Red Pen's writing rules are always on.
 
 ## Skills
 
@@ -18,7 +18,7 @@ product-os is a set of skills for product and consulting work. When a request ma
 | `review-panel` | A doc needs one reviewer persona or a panel before it is shared |
 | `meeting-prep` | Preparing for a meeting with a person or on a topic |
 | `new-workspace` | Starting a new client, employer, or big standalone effort, or a new project inside one |
-| `writing-skills` | Creating or editing a product-os skill |
+| `writing-skills` | Creating or editing a builder-os skill |
 
 ## Workspaces
 

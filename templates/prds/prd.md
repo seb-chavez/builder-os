@@ -2,7 +2,7 @@
 
 *[One sentence on the outcome for users or the business. Write it last.]*
 
-*Rules for every section, including length limits: `skills/product-requirements-drafting/references/prd-writing.md` in product-os. Delete all italic text before sharing.*
+*Rules for every section, including length limits: `skills/product-requirements-drafting/references/prd-writing.md` in builder-os. Delete all italic text before sharing.*
 
 ## Reviewers
 

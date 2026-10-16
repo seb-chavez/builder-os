@@ -1,6 +1,6 @@
 # [Workspace name]
 
-Workspace for [what this is: my PM job at Company / advisory work for Client / a standalone effort]. product-os supplies the skills and the layout; this file holds what is specific here.
+Workspace for [what this is: my PM job at Company / advisory work for Client / a standalone effort]. builder-os supplies the skills and the layout; this file holds what is specific here.
 
 ## Context
 
