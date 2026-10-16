@@ -163,6 +163,7 @@ Only for skills enforcing a discipline someone will be tempted to skip. Skip thi
 **REQUIRED for every new skill.** The first three are the ones that get forgotten.
 
 - [ ] Add a row to the skills table in **both** `skills/using-builder-os/SKILL.md` and `README.md`. CI fails if they disagree
+- [ ] Bump `version` in `.claude-plugin/plugin.json`. Installed copies only update when it changes
 - [ ] Restart the session after `/plugin update`. Skills do not hot-reload
 - [ ] Add test cases in `skills/<name>/evals/`: one that should start the skill, one that should not (or, for a slash-only skill, one that runs the command), and one for its most important rule. Copy an existing skill's cases for the format, then run `./scripts/test-skills.sh <name>`
 - [ ] Starts with an intake: the few questions that change the output, skipped when the request already answers them (rule in `using-builder-os`)
