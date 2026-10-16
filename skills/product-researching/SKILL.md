@@ -35,7 +35,7 @@ The project folder is `canonical/accounts/<account>/projects/<project>/`, or `ca
     └── <topic>.md
 ```
 
-`product-requirements-drafting` reads this folder and writes the PRD one level up, at the project root. Other research files may already live here; the four names above are reserved for the bundle. Everything under `canonical/` is gitignored, so the bundle stays local.
+`product-requirements-drafting` reads this folder and writes the PRD one level up, at the project root. Other research files may already live here; the four names above are reserved for the bundle. `canonical/` is committed with the workspace, so the bundle is too. Keep raw client data (exports, statements, contracts) out of it unless the engagement's NDA allows storing it in the repo; save a summary instead.
 
 ## The bundle
 
