@@ -1,6 +1,6 @@
 ---
 name: writing-skills
-description: Use when creating a new skill for product-os, editing an existing SKILL.md, deciding whether a recurring workflow is worth turning into a skill, or working out why a skill never fires when expected.
+description: Use when creating a new skill for builder-os, editing an existing SKILL.md, deciding whether a recurring workflow is worth turning into a skill, or working out why a skill never fires when expected.
 ---
 
 # Writing Skills
@@ -26,11 +26,11 @@ Write a skill when:
 Do not write a skill for:
 
 - A one-off task
-- A rule that is always true (that belongs in `using-product-os`, or a workspace's `AGENTS.md` if it is about one client)
+- A rule that is always true (that belongs in `using-builder-os`, or a workspace's `AGENTS.md` if it is about one client)
 - Formatting or prose conventions (those belong in `rules/`)
 - Anything CI or a script in `scripts/` could check mechanically
 
-Rule of thumb: `using-product-os` is what is always true. `rules/` is how output should look. A skill is what to do when a specific job comes up.
+Rule of thumb: `using-builder-os` is what is always true. `rules/` is how output should look. A skill is what to do when a specific job comes up.
 
 ## When NOT to use
 
@@ -42,7 +42,7 @@ Rule of thumb: `using-product-os` is what is always true. `rules/` is how output
 
 **Your first reply asks for the failure.** Before exploring files or drafting anything, ask: what went wrong the last time this task was done without a skill? A past output that needed fixing, or a cold run you can do now, is what the skill gets written against.
 
-**Outside the product-os repo**, do not stop to look for it. Still lead with the failure question, write the skill where the user wants it, and name the repo checklist below as the step to do once it moves into product-os.
+**Outside the builder-os repo**, do not stop to look for it. Still lead with the failure question, write the skill where the user wants it, and name the repo checklist below as the step to do once it moves into builder-os.
 
 Run the task without the skill and write down what actually happened, verbatim.
 
@@ -54,7 +54,7 @@ Skip this step and you get a skill full of advice nobody needed.
 
 For skills that enforce a discipline someone will be tempted to skip, the baseline needs pressure applied. See `references/testing-skills.md`.
 
-## Skill types in product-os
+## Skill types in builder-os
 
 | Type | Examples | What it needs |
 |---|---|---|
@@ -129,7 +129,7 @@ Rules:
 | (omit the field) | Fires on its own when the description matches, and you can still type `/name` | Skills whose value is catching something you did not think to ask for |
 | `disable-model-invocation: true` | Only fires when you type `/name` | Expensive, destructive, or externally visible skills |
 
-Some product-os skills are manual-only. That is defensible for skills that write files or post to Slack. It is the wrong default for a skill meant to catch you before you start down the wrong path. A manual-only skill's trigger phrases do nothing, so do not spend effort writing them.
+Some builder-os skills are manual-only. That is defensible for skills that write files or post to Slack. It is the wrong default for a skill meant to catch you before you start down the wrong path. A manual-only skill's trigger phrases do nothing, so do not spend effort writing them.
 
 ## Match the form to the failure
 
@@ -162,7 +162,7 @@ Only for skills enforcing a discipline someone will be tempted to skip. Skip thi
 
 **REQUIRED for every new skill.** The first three are the ones that get forgotten.
 
-- [ ] Add a row to the skills table in **both** `skills/using-product-os/SKILL.md` and `README.md`. CI fails if they disagree
+- [ ] Add a row to the skills table in **both** `skills/using-builder-os/SKILL.md` and `README.md`. CI fails if they disagree
 - [ ] Restart the session after `/plugin update`. Skills do not hot-reload
 - [ ] Add test cases in `skills/<name>/evals/`: one that should start the skill, one that should not (or, for a slash-only skill, one that runs the command), and one for its most important rule. Copy an existing skill's cases for the format, then run `./scripts/test-skills.sh <name>`
 - [ ] Frontmatter has `name` and `description`, under 1024 characters total
@@ -177,8 +177,8 @@ Only for skills enforcing a discipline someone will be tempted to skip. Skip thi
 |---|---|
 | Writing the skill before watching anything fail | Run the cold pass first. Otherwise you are documenting intentions |
 | Description summarizes the workflow | Triggering conditions only. The summary becomes a shortcut past the body |
-| Skill duplicates `using-product-os` | If it is always true, it belongs there |
-| Forgetting the skills table | `using-product-os` never tells the agent the skill exists |
+| Skill duplicates `using-builder-os` | If it is always true, it belongs there |
+| Forgetting the skills table | `using-builder-os` never tells the agent the skill exists |
 | Narrative writing ("last quarter we found...") | Skills are reference, not story. Cut to the technique |
 | Adding a skill because the topic feels important | Importance is not reuse. Three real uses, or skip it |
 
@@ -191,4 +191,4 @@ Only for skills enforcing a discipline someone will be tempted to skip. Skip thi
 
 Adapted from `superpowers:writing-skills` by Jesse Vincent, MIT licensed.
 
-Changes for product-os: removed the hard dependency on `superpowers:test-driven-development` (the testing method is now self-contained in `references/testing-skills.md`), dropped the graphviz flowchart tooling, reframed examples from engineering to PM work, and added the repo checklist and the model-invocation decision.
+Changes for builder-os: removed the hard dependency on `superpowers:test-driven-development` (the testing method is now self-contained in `references/testing-skills.md`), dropped the graphviz flowchart tooling, reframed examples from engineering to PM work, and added the repo checklist and the model-invocation decision.

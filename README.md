@@ -1,8 +1,8 @@
-# product-os
+# builder-os
 
 *Skills for product and consulting work, with an editor's red pen built in.*
 
-PMs and consultants drafting with an AI agent hit the same problems: the agent jumps to solutions before the problem is framed, writes PRDs that leave engineers guessing, and pads every doc until it reads like AI wrote it. product-os is one Claude Code plugin with a skill for each step, from brainstorming to a reviewed PRD, plus Red Pen's writing rules on in every session.
+PMs and consultants drafting with an AI agent hit the same problems: the agent jumps to solutions before the problem is framed, writes PRDs that leave engineers guessing, and pads every doc until it reads like AI wrote it. builder-os is one Claude Code plugin with a skill for each step, from brainstorming to a reviewed PRD, plus Red Pen's writing rules on in every session.
 
 ## Skills
 
@@ -15,9 +15,9 @@ PMs and consultants drafting with an AI agent hit the same problems: the agent j
 | `meeting-prep` | Preparing for a meeting, from the workspace's notes |
 | `new-workspace` | Starting a new client, employer, or project |
 | `red-pen` | A draft is too long or reads like AI wrote it |
-| `writing-skills` | Creating or editing a product-os skill |
+| `writing-skills` | Creating or editing a builder-os skill |
 
-A session-start hook loads Red Pen's rules and a short skill list (`using-product-os`), the same pattern as [Superpowers](https://github.com/obra/superpowers). Every other skill loads only when a request matches it, so the plugin stays quiet in repos where you are writing code. Document templates (agenda, decision log, project brief, status update, roadmap, discovery questions, PRD) live in [templates/](templates/).
+A session-start hook loads Red Pen's rules and a short skill list (`using-builder-os`), the same pattern as [Superpowers](https://github.com/obra/superpowers). Every other skill loads only when a request matches it, so the plugin stays quiet in repos where you are writing code. Document templates (agenda, decision log, project brief, status update, roadmap, discovery questions, PRD) live in [templates/](templates/).
 
 ## Workspaces
 
@@ -79,8 +79,8 @@ A 696-word founder brief ("In today's rapidly evolving healthcare landscape...")
 **Claude Code:**
 
 ```
-/plugin marketplace add seb-chavez/product-os
-/plugin install product-os@product-os
+/plugin marketplace add seb-chavez/builder-os
+/plugin install builder-os@builder-os
 ```
 
 Or turn it on for one repo only, in `.claude/settings.json` (or `.claude/settings.local.json` to keep it off a shared repo):
@@ -88,9 +88,9 @@ Or turn it on for one repo only, in `.claude/settings.json` (or `.claude/setting
 ```json
 {
   "extraKnownMarketplaces": {
-    "product-os": { "source": { "source": "github", "repo": "seb-chavez/product-os" } }
+    "builder-os": { "source": { "source": "github", "repo": "seb-chavez/builder-os" } }
   },
-  "enabledPlugins": { "product-os@product-os": true }
+  "enabledPlugins": { "builder-os@builder-os": true }
 }
 ```
 

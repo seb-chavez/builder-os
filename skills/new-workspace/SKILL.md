@@ -8,7 +8,7 @@ argument-hint: "[name]"
 
 ## Overview
 
-Sets up either a new workspace (its own private repo) or a new project folder inside the current one. Same layout for product and consulting work. Layout and rules are in `using-product-os`.
+Sets up either a new workspace (its own private repo) or a new project folder inside the current one. Same layout for product and consulting work. Layout and rules are in `using-builder-os`.
 
 ## Steps
 
@@ -32,13 +32,13 @@ Sets up either a new workspace (its own private repo) or a new project folder in
 4. Create:
    - `AGENTS.md` from [workspace-agents.md](workspace-agents.md), every bracket filled from the answers. Delete lines with no answer rather than leaving brackets.
    - `CLAUDE.md` containing one line: `@AGENTS.md`.
-   - `.claude/settings.json` turning on product-os:
+   - `.claude/settings.json` turning on builder-os:
      ```json
      {
        "extraKnownMarketplaces": {
-         "product-os": { "source": { "source": "github", "repo": "seb-chavez/product-os" } }
+         "builder-os": { "source": { "source": "github", "repo": "seb-chavez/builder-os" } }
        },
-       "enabledPlugins": { "product-os@product-os": true }
+       "enabledPlugins": { "builder-os@builder-os": true }
      }
      ```
    - `canonical/people/`, `canonical/projects/`, `canonical/company/`, `canonical/teams/`, each with a `.gitkeep`, and an empty `canonical/GOALS.md`.
