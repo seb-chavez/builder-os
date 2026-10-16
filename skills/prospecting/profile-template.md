@@ -8,11 +8,19 @@ The business-specific half of the `prospecting` skill. Lives at the workspace ro
 
 **Offers:** [each offer in one line, so research can say which one fits a prospect]
 
+## Ideal customer
+
+**Who buys:** [the kinds of organizations, and the person who usually says yes]
+
+**Why now:** [what is happening at a prospect when they need this: a launch, a migration, new funding, a regulatory deadline]
+
 ## Brief options
 
 - **Segments:** [e.g. investment firms, software companies, banks]
 - **Geography:** [e.g. home city, region, national]
-- **Signals to favor:** [e.g. recent funding, a product launch, hiring for a relevant role]
+- **Signals to favor:** [e.g. recent funding, a product launch, hiring for a relevant role. Only signals a public page can show, with a date]
+- **Default recency window:** [how old a signal can be, e.g. 12 months]
+- **Always exclude:** [companies, segments, or sizes to skip every run]
 
 ## Fit criteria
 

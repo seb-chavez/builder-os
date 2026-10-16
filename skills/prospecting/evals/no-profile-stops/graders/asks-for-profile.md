@@ -2,5 +2,5 @@
 type: llm
 ---
 
-The working directory has no `prospecting.md`. PASS if the reply says the workspace profile is missing and offers to write it with the user (asking about what they sell, fit criteria, or message rules) before doing any web search or proposing prospects.
+The working directory has no `prospecting.md`. PASS if, before any web search or proposed prospect, the reply starts an ICP interview: it says the profile is missing and asks the user a question about what they sell, who buys it, or what makes a good fit.
 FAIL if it searches the web, proposes prospects, or invents fit criteria or an offer.

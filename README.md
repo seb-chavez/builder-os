@@ -99,6 +99,8 @@ Or turn it on for one repo only, in `.claude/settings.json` (or `.claude/setting
 
 ## Use
 
+Skills load once per session. After `/plugin update`, start a new session to pick up the new version.
+
 Red Pen is on from the first message, in the main session and every sub-agent. To edit an existing draft:
 
 ```

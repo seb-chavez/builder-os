@@ -7,21 +7,27 @@ description: Use when finding, researching, verifying, or ranking business-devel
 
 Business development. The output is verified prospect files and outreach drafts. The user reviews and sends every message; nothing is sent automatically, and LinkedIn is never automated (its user agreement bans scraping and automated messaging, and the user's own account is usually the main sales channel).
 
-## First: the workspace profile
+## Search budget
 
-Everything specific to the business lives in the workspace's `prospecting.md`: what it sells, the segments it targets, fit criteria, who to contact at each kind of prospect, and the user's message rules. Read it before anything else.
-
-If it is missing, stop. Offer to write it with the user from [profile-template.md](profile-template.md), one question per message. Never invent fit criteria, an offer, or message rules.
+Know the cost before starting. Research and verification take about 15 to 30 web searches per prospect, and a session allows about 200 by default, so one session covers 5 to 8 prospects. Above 6, say so before searching: the user can split the run across sessions (the saved brief lets a new session resume) or raise `CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION`. If searches run out mid-run, stop, say which step you reached, and point to the saved brief.
 
 ## The pipeline
 
+0. **ICP interview (no searching yet).** Nothing good comes from searching before the ideal customer is clear: vague targets pull in stale, out-of-region, and off-fit names.
+   - **No `prospecting.md` in the workspace:** interview the user to write it from [profile-template.md](profile-template.md), one question per message: what they sell and the offers, who buys it (segments), what makes a prospect a strong, weak, or bad fit, observable signals that someone needs it now, who to contact at each kind of prospect, and their message rules. Read back the draft profile and save it only after a yes. Never invent fit criteria, an offer, or message rules.
+   - **Profile exists:** read it, then show the ICP in three lines (offer, who it is for, top fit criteria) and ask whether it still holds for this run. Update the profile if the user changes it.
+   - **A brief from today already exists** in `accounts/_briefs/`: offer to resume from it instead of asking again.
 1. **Brief (ask the user).** Before any search, ask (skip what they already said; use the harness's multiple-choice question tool if it has one):
-   - **Segment** and **geography**, from the options in the profile.
-   - **Signals to favor**, from the profile (multi-select).
-   - **How many** to research this run (default 5; each takes about 15 minutes to research and verify).
+   - **Segment** and **geography**, from the profile's options.
+   - **Hard limits:** where the prospect must be based (HQ, not just an office), size range, anything that disqualifies.
+   - **Signals to favor**, from the profile (multi-select), and **how recent** a signal must be (default 12 months).
+   - **Exclusions:** named companies to skip, and anyone already in `accounts/_pipeline.md`.
+   - **How many** to research this run (default 5; see Search budget).
 
    Save the answers to `accounts/_briefs/YYYY-MM-DD-<segment>.md`, with one line on which offer fits this segment.
-2. **Propose a list (the user approves).** Check `accounts/_pipeline.md` and `accounts/` so nobody is researched or contacted twice. Do a light search for candidates that match the brief and show about twice as many as asked: name, one line on why, one source link each. Only the user's picks get researched.
+2. **Propose a list (the user approves).** Check `accounts/_pipeline.md` and `accounts/` so nobody is researched or contacted twice. Do a light search for candidates that match the brief and show about twice as many as asked, as a table: name, location, one line on why, a source link, and a **signal check** (the signal and its date, or "not checked"). Drop candidates that fail a hard limit or whose signal is older than the window, and list them below the table with the reason. Only the user's picks get researched.
+
+   Discovery is the weakest step. Web search finds funding news mostly through ranking and news sites, and some signals (hiring for a specific role) are hard to see at all. Treat what it finds as leads, not evidence. If a run's list comes back thin, say so, and name the kind of data source that would help (a funding database, a contact database) rather than padding the list.
 3. **Research:** one `prospect-researcher` agent per approved prospect, in parallel. Give each the absolute paths of this file, the workspace's `prospecting.md`, and the prospect's folder.
 4. **Verify:** one `claim-verifier` agent per prospect, after its research is done, with the same paths. Only prospects marked `Ready for outreach: yes` move on.
 5. **Rank** the ready prospects (see Ranking) and show the list: one contact per prospect, the reason, the channel.
