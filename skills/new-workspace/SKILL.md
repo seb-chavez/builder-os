@@ -20,7 +20,7 @@ Sets up either a new workspace (its own private repo) or a new project folder in
 
 ### New project
 
-2. Ask for a short project name. Create `canonical/projects/<slug>/` with one note, `YYYY-MM-DD-kickoff.md`, holding what the user told you about the project. Stop.
+2. Ask for a short project name, and which account it belongs to (list the folders in `canonical/accounts/`), or none for internal work. Create `canonical/accounts/<account>/projects/<slug>/`, or `canonical/company/projects/<slug>/` with no account, with one note, `YYYY-MM-DD-kickoff.md`, holding what the user told you about the project. A new account also gets an `account.md` with what the user said about it. Stop.
 
 ### New workspace
 
@@ -41,7 +41,7 @@ Sets up either a new workspace (its own private repo) or a new project folder in
        "enabledPlugins": { "builder-os@builder-os": true }
      }
      ```
-   - `canonical/people/`, `canonical/projects/`, `canonical/company/`, `canonical/teams/`, each with a `.gitkeep`, and an empty `canonical/GOALS.md`.
+   - `canonical/accounts/`, `canonical/partners/`, `canonical/vendors/`, `canonical/company/`, each with a `.gitkeep`, and an empty `canonical/contacts.md` and `canonical/GOALS.md`.
 5. `git init` and make the first commit. `canonical/` **is** committed: this repo is private, and git is its backup.
 6. **Do not create a remote or push.** Ask where it should live. A client's notes on a personal GitHub account can break a client agreement; the user decides.
 7. Tell the user to open a new session in the folder so the workspace loads.
@@ -51,6 +51,7 @@ Sets up either a new workspace (its own private repo) or a new project folder in
 | Mistake | Fix |
 |---------|-----|
 | Creating a project folder inside the wrong workspace | Check which workspace you are in before writing |
+| Creating `canonical/projects/` or one file per person | Projects go under an account or `company/`; people are sections in `people.md` or `contacts.md` |
 | Copying people or notes from another workspace to "seed" this one | Never. Each workspace starts empty |
 | Gitignoring `canonical/` | It is the point of the repo. Keep the repo private instead |
 | Pushing to GitHub without asking | Ask first. Where client data lives is the user's call |

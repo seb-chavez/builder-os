@@ -1,6 +1,6 @@
 # Prospecting profile
 
-The business-specific half of the `prospecting` skill. Lives at the workspace root as `prospecting.md`. Fill every section; delete a bullet rather than leave a bracket.
+The business-specific half of the `prospecting` skill. Lives in the workspace at `prospecting/profile.md`. Fill every section; delete a bullet rather than leave a bracket.
 
 ## What we sell
 

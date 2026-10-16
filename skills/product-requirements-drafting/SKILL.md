@@ -18,7 +18,7 @@ Turn a `/product-researching` bundle into a PRD. This skill is the steps only. E
 
 **Intake** (see `using-builder-os`; one message, skip what is known): who the main readers are (the engineering team, leadership, a client) and where it will be published. The readers set how much context the Problem section carries; the destination sets the format.
 
-Ask once if not given: the research folder holding `briefing.md` (usually `canonical/projects/<project>/research/`). Its parent is `{project_dir}`.
+Ask once if not given: the research folder holding `briefing.md` (usually `research/` in the project folder: `canonical/accounts/<account>/projects/<project>/research/`, or `canonical/company/projects/<project>/research/`). Its parent is `{project_dir}`.
 
 Pick the deliverable from the request:
 
@@ -92,9 +92,9 @@ Tell the PM, in a few lines: what you drafted, where it is saved, what the revie
 ## Examples
 
 ```
-/product-requirements-drafting canonical/projects/expense-receipts: outline, P0 only
+/product-requirements-drafting canonical/company/projects/expense-receipts: outline, P0 only
 let's write the PRD for the receipt scanning project
-update canonical/projects/expense-receipts/prd.md now that we picked option B for D1
+update canonical/company/projects/expense-receipts/prd.md now that we picked option B for D1
 ```
 
 ## Related

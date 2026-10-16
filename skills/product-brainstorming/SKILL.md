@@ -24,7 +24,7 @@ Ask once, in your first message: **"Solo session with me, or are we prepping a w
 
 ## Step 1: Frame the problem
 
-1. Read the current state, if this is a workspace: `canonical/projects/`, related people files, `canonical/GOALS.md`.
+1. Read the current state, if this is a workspace: the project folders (`canonical/accounts/*/projects/`, `canonical/company/projects/`), related people sections, `canonical/GOALS.md`.
 2. Ask up to three questions, **one per message**: who has the problem, what outcome would show it is solved, and what constraints are fixed (time, team, platform).
 3. Write the frame:
    - **How might we** [one question, aimed at the outcome, not a solution]?
@@ -55,7 +55,7 @@ Recommend one method with a one-line reason, then let the PM choose. Full steps 
 - Quantity over quality: aim for 15 to 30 ideas across the session. No scoring, no "but" during this step.
 - Push past the obvious. After the first easy round, ask for the weird version, the version for a different user, the version with no budget.
 
-**Workshop:** write the facilitator kit to `canonical/projects/<project>/workshops/YYYY-MM-DD-<method>.md`:
+**Workshop:** write the facilitator kit to `workshops/YYYY-MM-DD-<method>.md` in the project folder:
 - The approved frame, to put at the top of the board.
 - An agenda with timings (most methods fit in 45 to 60 minutes).
 - The exact prompt for each round, word for word.
@@ -77,7 +77,7 @@ Then stop. When the PM brings back the team's output (pasted, a photo, a board e
 
 ## Step 5: Write it up and hand off
 
-Write the brief with [templates/strategy/project-brief.md](../../templates/strategy/project-brief.md), saved to `canonical/projects/<project>/`. It records: the frame, the chosen idea, the alternatives considered and why they lost, and the riskiest assumptions. Apply Red Pen budgets: a brief is one page.
+Write the brief with [templates/strategy/project-brief.md](../../templates/strategy/project-brief.md), saved to the project folder. It records: the frame, the chosen idea, the alternatives considered and why they lost, and the riskiest assumptions. Apply Red Pen budgets: a brief is one page.
 
 Hand off to `product-researching`. The riskiest assumptions become its research questions. Do not draft a PRD from here.
 

@@ -13,7 +13,7 @@ PMs and consultants drafting with an AI agent hit the same problems: the agent j
 | `product-requirements-drafting` | Writing or updating a PRD, with a fresh reviewer pass against the PRD rulebook |
 | `review-panel` | A doc needs one reviewer persona or a panel: pessimist, optimist, operator, new hire, budget, engineer, executive, champion user |
 | `meeting-prep` | Preparing for a meeting, from the workspace's notes |
-| `prospecting` | Business development: research and verify prospects with two agents (`prospect-researcher`, `claim-verifier`), rank them, and draft outreach you send yourself. Your offer, fit criteria, and message rules live in the workspace's `prospecting.md` |
+| `prospecting` | Business development: research and verify prospects with two agents (`prospect-researcher`, `claim-verifier`), rank them, and draft outreach you send yourself. Your offer, fit criteria, and message rules live in the workspace's `prospecting/profile.md` |
 | `new-workspace` | Starting a new client, employer, or project |
 | `red-pen` | A draft is too long or reads like AI wrote it |
 | `writing-skills` | Creating or editing a builder-os skill |
@@ -23,6 +23,10 @@ A session-start hook loads Red Pen's rules and a short skill list (`using-builde
 ## Workspaces
 
 Notes about people and projects live in a **workspace**: one private repo per boundary of context (an employer, a client, a standalone effort), with an `AGENTS.md` and a `canonical/` folder. `/new-workspace` sets one up. Skills read only the current workspace, so one client's notes never show up in another's meeting prep. Outside a workspace, the skills ask you for context instead.
+
+The layout: `canonical/accounts/<account>/` (with `people.md` and `projects/`), `canonical/partners/<firm>/`, `canonical/vendors/`, `canonical/contacts.md` for people with no account, `canonical/company/` for your own org and internal projects, and `prospecting/` for the profile, pipeline, and briefs. Each person is a `## Name - role` section, not a file. A workspace's `AGENTS.md` can map its own layout instead; the skills follow it. Full table in [using-builder-os](skills/using-builder-os/SKILL.md).
+
+**Upgrading a 0.3 workspace:** move `canonical/projects/<project>/` under an account (`canonical/accounts/<account>/projects/`) or `canonical/company/projects/`; merge `canonical/teams/` into `canonical/company/`; turn each `canonical/people/<name>.md` into a `## Name - role` section (demote its headings one level) in that account's or partner's `people.md`, or in `canonical/contacts.md`; move `accounts/` to `canonical/accounts/`, `prospecting.md` to `prospecting/profile.md`, `accounts/_pipeline.md` to `prospecting/pipeline.md`, and `accounts/_briefs/` to `prospecting/briefs/`. Meeting prep still reads old `canonical/people/` files until you do.
 
 ## Red Pen
 
