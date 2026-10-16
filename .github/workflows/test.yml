@@ -17,4 +17,5 @@ jobs:
         with:
           node-version: "22"
       # Free checks only. The benchmark calls a model and is run by maintainers by hand.
+      - run: pip install --quiet pyyaml
       - run: python -m unittest discover -s tests -v
