@@ -16,6 +16,8 @@ Turn a `/product-researching` bundle into a PRD. This skill is the steps only. E
 
 ### 1. Find the inputs
 
+**Intake** (see `using-builder-os`; one message, skip what is known): who the main readers are (the engineering team, leadership, a client) and where it will be published. The readers set how much context the Problem section carries; the destination sets the format.
+
 Ask once if not given: the research folder holding `briefing.md` (usually `canonical/projects/<project>/research/`). Its parent is `{project_dir}`.
 
 Pick the deliverable from the request:

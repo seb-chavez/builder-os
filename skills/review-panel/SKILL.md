@@ -37,7 +37,7 @@ Natural language works too: "run a review panel on this PRD", "devil's advocate 
 
 **If the user already named personas or flags** ("pessimist review", "just the engineer", `--budget`), run those and skip the question.
 
-**Otherwise, ask before running anything.** One message: show the table's Persona and Catches columns, recommend the default four plus any add-on the document obviously calls for (a PRD: engineer; a budget ask: budget holder; a doc for leadership: executive), and let the user pick by name, or say "default". Use the harness's multiple-choice question tool if it has one.
+**Otherwise, ask before running anything.** In the same message, also ask (skip what is obvious from the doc or request): who will read it and what decision it supports, and how finished it is (an early draft gets big-picture findings only; a near-final doc gets line-level ones). Pass both answers to every persona. Then: show the table's Persona and Catches columns, recommend the default four plus any add-on the document obviously calls for (a PRD: engineer; a budget ask: budget holder; a doc for leadership: executive), and let the user pick by name, or say "default". Use the harness's multiple-choice question tool if it has one.
 
 ### 2. Run them
 

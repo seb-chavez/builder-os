@@ -21,6 +21,15 @@ builder-os is a set of skills for product and consulting work. When a request ma
 | `new-workspace` | Starting a new client, employer, or big standalone effort, or a new project inside one |
 | `writing-skills` | Creating or editing a builder-os skill |
 
+## Intake before work
+
+Every skill starts by learning what this user needs from this run. A run aimed at the wrong target wastes more than a minute of questions.
+
+- **Ask only what changes the output.** Skip anything the request, the workspace (`AGENTS.md`, `canonical/`, a saved profile), or an earlier answer already says.
+- **At most three questions,** in one message as multiple choice when the harness has a question tool; open-ended ones one per message.
+- **Nothing missing? Don't ask.** State your assumptions in one line and proceed, so the user can correct them.
+- **Save answers that will hold next time** (a profile file, the workspace `AGENTS.md`) so they are not asked again.
+
 ## Workspaces
 
 A workspace is one boundary of context: a client, an employer, or a standalone effort. It is its own private repo, with an `AGENTS.md` and a `canonical/` folder:
