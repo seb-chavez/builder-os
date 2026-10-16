@@ -17,6 +17,7 @@ builder-os is a set of skills for product and consulting work. When a request ma
 | `product-requirements-drafting` | Writing or updating a PRD or spec |
 | `review-panel` | A doc needs one reviewer persona or a panel before it is shared |
 | `meeting-prep` | Preparing for a meeting with a person or on a topic |
+| `prospecting` | Finding, researching, and ranking prospects, or drafting outreach for the user to send. Reads the workspace's `prospecting.md` |
 | `new-workspace` | Starting a new client, employer, or big standalone effort, or a new project inside one |
 | `writing-skills` | Creating or editing a builder-os skill |
 
