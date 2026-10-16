@@ -13,6 +13,7 @@ PMs and consultants drafting with an AI agent hit the same problems: the agent j
 | `product-requirements-drafting` | Writing or updating a PRD, with a fresh reviewer pass against the PRD rulebook |
 | `review-panel` | A doc needs one reviewer persona or a panel: pessimist, optimist, operator, new hire, budget, engineer, executive, champion user |
 | `meeting-prep` | Preparing for a meeting, from the workspace's notes |
+| `prospecting` | Business development: research and verify prospects with two agents (`prospect-researcher`, `claim-verifier`), rank them, and draft outreach you send yourself. Your offer, fit criteria, and message rules live in the workspace's `prospecting.md` |
 | `new-workspace` | Starting a new client, employer, or project |
 | `red-pen` | A draft is too long or reads like AI wrote it |
 | `writing-skills` | Creating or editing a builder-os skill |
@@ -97,6 +98,8 @@ Or turn it on for one repo only, in `.claude/settings.json` (or `.claude/setting
 **Cursor, Codex, or any agent that reads `AGENTS.md`:** paste [rules/red-pen.md](rules/red-pen.md) into your `AGENTS.md` or rules file. The skills are plain `SKILL.md` folders and work in any harness that reads them.
 
 ## Use
+
+Skills load once per session. After `/plugin update`, start a new session to pick up the new version.
 
 Red Pen is on from the first message, in the main session and every sub-agent. To edit an existing draft:
 
