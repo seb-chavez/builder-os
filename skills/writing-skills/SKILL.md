@@ -165,6 +165,7 @@ Only for skills enforcing a discipline someone will be tempted to skip. Skip thi
 - [ ] Add a row to the skills table in **both** `skills/using-builder-os/SKILL.md` and `README.md`. CI fails if they disagree
 - [ ] Restart the session after `/plugin update`. Skills do not hot-reload
 - [ ] Add test cases in `skills/<name>/evals/`: one that should start the skill, one that should not (or, for a slash-only skill, one that runs the command), and one for its most important rule. Copy an existing skill's cases for the format, then run `./scripts/test-skills.sh <name>`
+- [ ] Starts with an intake: the few questions that change the output, skipped when the request already answers them (rule in `using-builder-os`)
 - [ ] Frontmatter has `name` and `description`, under 1024 characters total
 - [ ] Model invocation decided deliberately, not by accident
 - [ ] Prose follows `rules/red-pen.md`. No em dashes; CI checks

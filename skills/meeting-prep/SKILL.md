@@ -20,6 +20,7 @@ Only read the current workspace. Never pull notes from another client's workspac
 ## Steps
 
 1. Take the person name or topic from the user's input (e.g., `/meeting-prep jordan` or `/meeting-prep board meeting`)
+   **Intake** (see `using-builder-os`; skip what the request says): what the meeting is for (a decision, an update, a relationship, a sale, an interview), and what the user wants to walk out with. Shape the brief around the answer: lead with what supports their ask, and add a "Your ask" line at the top.
 2. Fuzzy-match the input against filenames in `canonical/people/` and read all matching files
 3. Scan recent project notes (`canonical/projects/*/notes/`) for mentions of that person or topic using the Grep tool
 4. Read `canonical/GOALS.md` for any relevant items to surface

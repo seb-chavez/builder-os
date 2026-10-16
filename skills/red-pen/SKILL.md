@@ -18,7 +18,7 @@ Edit a draft down to the shortest version that still does its job. The rules (la
 
 ## Steps
 
-1. **Name the doc type** and look up its ceiling and floor. If the type is unclear, ask once.
+1. **Name the doc type and the reader** and look up the type's ceiling and floor. If the type, the reader, or what the reader should do after reading is unclear, ask once, in one message. The point you keep in step 2 is the one that reader acts on.
 2. **Find the point**: the one or two sentences the reader must leave with. If you cannot, the draft has no point yet; say so and stop. If the type's floor names the point (a strategy doc's bet, a status update's ask), it goes in the doc as the first line.
 3. **Mark what cannot be cut**: the floor for this type plus the never-cut list. If a risk has no owner, flag it; never invent one.
 4. **Climb the ladder**, whole sections first, sentences last:
