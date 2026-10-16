@@ -24,8 +24,10 @@ Investigate a problem and leave behind a bundle that `product-requirements-draft
 
 ## Where the bundle lives
 
+The project folder is `canonical/accounts/<account>/projects/<project>/`, or `canonical/company/projects/<project>/` when there is no account.
+
 ```
-canonical/projects/<project>/research/
+<project folder>/research/
 ├── briefing.md
 ├── decisions.md
 ├── sources.md
@@ -33,7 +35,7 @@ canonical/projects/<project>/research/
     └── <topic>.md
 ```
 
-`product-requirements-drafting` reads this folder and writes the PRD one level up, at the project root. Other research files may already live here; the four names above are reserved for the bundle. Everything under `canonical/` is gitignored, so the bundle stays local.
+`product-requirements-drafting` reads this folder and writes the PRD one level up, at the project root. Other research files may already live here; the four names above are reserved for the bundle. `canonical/` is committed with the workspace, so the bundle is too. Keep raw client data (exports, statements, contracts) out of it unless the engagement's NDA allows storing it in the repo; save a summary instead.
 
 ## The bundle
 
@@ -49,7 +51,7 @@ canonical/projects/<project>/research/
 ## Steps
 
 1. **Confirm scope before investigating. Your first reply is the proposed scope, before reading any file:** the question, which systems you will search, which research notes you expect to produce, and the project folder you will write to. Say which systems you cannot reach. Wait for a yes. A full pass is expensive
-2. **Then read local context,** before any outside source: `canonical/projects/<project>/` including any existing `research/`, related people files, and `canonical/GOALS.md`. Free, and it shapes better queries
+2. **Then read local context,** before any outside source: the project folder including any existing `research/`, the account's `account.md` and `people.md`, and `canonical/GOALS.md`. Free, and it shapes better queries
 3. **Gather.** Work source by source (below), capturing URLs as you go rather than reconstructing them later
 4. **Write `research-notes/` as you gather**, one file per area. Raw and specific. This is the layer allowed to be technical
 5. **Write `briefing.md` last.** It synthesizes the notes; it does not accumulate during gathering

@@ -1,3 +1,6 @@
 __pycache__/
 .DS_Store
 skills/*/evals/results/
+# workspace data from testing skills in this checkout; real workspaces commit these
+/canonical/
+/prospecting/

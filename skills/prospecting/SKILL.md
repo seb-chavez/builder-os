@@ -14,25 +14,25 @@ Know the cost before starting. Research and verification take about 15 to 30 web
 ## The pipeline
 
 0. **ICP interview (no searching yet).** Nothing good comes from searching before the ideal customer is clear: vague targets pull in stale, out-of-region, and off-fit names.
-   - **No `prospecting.md` in the workspace:** interview the user to write it from [profile-template.md](profile-template.md), one question per message: what they sell and the offers, who buys it (segments), what makes a prospect a strong, weak, or bad fit, observable signals that someone needs it now, who to contact at each kind of prospect, and their message rules. Read back the draft profile and save it only after a yes. Never invent fit criteria, an offer, or message rules.
+   - **No `prospecting/profile.md` in the workspace:** interview the user to write it from [profile-template.md](profile-template.md), one question per message: what they sell and the offers, who buys it (segments), what makes a prospect a strong, weak, or bad fit, observable signals that someone needs it now, who to contact at each kind of prospect, and their message rules. Read back the draft profile and save it only after a yes. Never invent fit criteria, an offer, or message rules.
    - **Profile exists:** read it, then show the ICP in three lines (offer, who it is for, top fit criteria) and ask whether it still holds for this run. Update the profile if the user changes it.
-   - **A brief from today already exists** in `accounts/_briefs/`: offer to resume from it instead of asking again.
+   - **A brief from today already exists** in `prospecting/briefs/`: offer to resume from it instead of asking again.
 1. **Brief (ask the user).** Before any search, ask (skip what they already said; use the harness's multiple-choice question tool if it has one):
    - **Segment** and **geography**, from the profile's options.
    - **Hard limits:** where the prospect must be based (HQ, not just an office), size range, anything that disqualifies.
    - **Signals to favor**, from the profile (multi-select), and **how recent** a signal must be (default 12 months).
-   - **Exclusions:** named companies to skip, and anyone already in `accounts/_pipeline.md`.
+   - **Exclusions:** named companies to skip, and anyone already in `prospecting/pipeline.md`.
    - **How many** to research this run (default 5; see Search budget).
 
-   Save the answers to `accounts/_briefs/YYYY-MM-DD-<segment>.md`, with one line on which offer fits this segment.
-2. **Propose a list (the user approves).** Check `accounts/_pipeline.md` and `accounts/` so nobody is researched or contacted twice. Do a light search for candidates that match the brief and show about twice as many as asked, as a table: name, location, one line on why, a source link, and a **signal check** (the signal and its date, or "not checked"). Drop candidates that fail a hard limit or whose signal is older than the window, and list them below the table with the reason. Only the user's picks get researched.
+   Save the answers to `prospecting/briefs/YYYY-MM-DD-<segment>.md`, with one line on which offer fits this segment.
+2. **Propose a list (the user approves).** Check `prospecting/pipeline.md` and `canonical/accounts/` so nobody is researched or contacted twice. Do a light search for candidates that match the brief and show about twice as many as asked, as a table: name, location, one line on why, a source link, and a **signal check** (the signal and its date, or "not checked"). Drop candidates that fail a hard limit or whose signal is older than the window, and list them below the table with the reason. Only the user's picks get researched.
 
    Discovery is the weakest step. Web search finds funding news mostly through ranking and news sites, and some signals (hiring for a specific role) are hard to see at all. Treat what it finds as leads, not evidence. If a run's list comes back thin, say so, and name the kind of data source that would help (a funding database, a contact database) rather than padding the list.
-3. **Research:** one `prospect-researcher` agent per approved prospect, in parallel. Give each the absolute paths of this file, the workspace's `prospecting.md`, and the prospect's folder.
+3. **Research:** one `prospect-researcher` agent per approved prospect, in parallel. Give each the absolute paths of this file, the workspace's `prospecting/profile.md`, and the prospect's folder.
 4. **Verify:** one `claim-verifier` agent per prospect, after its research is done, with the same paths. Only prospects marked `Ready for outreach: yes` move on.
 5. **Rank** the ready prospects (see Ranking) and show the list: one contact per prospect, the reason, the channel.
-6. **Draft** messages for the ones the user picks (see Messages). Save each to `accounts/<slug>/YYYY-MM-DD-outreach.md`.
-7. **Track.** When the user says a message went out, add or update its row in `accounts/_pipeline.md`: who, when, channel, status, next step.
+6. **Draft** messages for the ones the user picks (see Messages). Save each to `canonical/accounts/<slug>/YYYY-MM-DD-outreach.md`.
+7. **Track.** When the user says a message went out, add or update its row in `prospecting/pipeline.md`: who, when, channel, status, next step.
 
 ## Evidence rules
 
@@ -63,7 +63,7 @@ Unless the profile says otherwise, rank ready prospects by: (1) how many confirm
 
 ## Files
 
-Folder: `accounts/<slug>/` (lowercase, hyphenated company name).
+Folder: `canonical/accounts/<slug>/` (lowercase, hyphenated company name).
 
 - `account.md`: from the workspace's account template if it has one. Contacts table with role, relevant companies with source, and email (`not public` if not published). Notes start with who to contact first and why.
 - Investment firms only: `YYYY-MM-DD-portfolio-screen.md` from [portfolio-screen.md](portfolio-screen.md).
@@ -83,4 +83,4 @@ Follow the profile's message rules. On top of them, always:
 
 ## After a reply
 
-Read the reply, update `accounts/_pipeline.md`, and draft a response that moves toward the profile's next step (a call, a meeting). If they asked for something specific, answer that first.
+Read the reply, update `prospecting/pipeline.md`, and draft a response that moves toward the profile's next step (a call, a meeting). If they asked for something specific, answer that first.
