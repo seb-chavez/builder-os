@@ -57,3 +57,5 @@ Use every answer your source gives. Only where the source is silent, write **Ope
 ## Voice
 
 Lead with the answer. Short sentences, under about 16 words. Plain words a smart non-specialist follows on the first read. If a sentence could appear in a thousand other docs, delete it. If a founder would not say it out loud to an investor, rewrite it.
+
+**Plain beats dense.** If the reader has to ask what something means, it failed. Explain the thing instead of naming it: "store broadly, query narrowly" means nothing alone; "if you only fetch what you think you need, you never find out you were wrong" carries itself. Use one worked example when an idea is abstract. Cut coined phrases. A short sentence that lands beats a precise one that doesn't.
