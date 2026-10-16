@@ -32,7 +32,7 @@ Every skill starts by learning what this user needs from this run. A run aimed a
 
 ## Workspaces
 
-A workspace is one boundary of context: a client, an employer, or a standalone effort. It is its own private repo, with an `AGENTS.md` and a `canonical/` folder:
+A workspace is one boundary of context: a client, an employer, or a standalone effort. It is its own private repo, with an `AGENTS.md` and a `canonical/` folder. The default layout, used when the workspace `AGENTS.md` doesn't map its own:
 
 | Path | Holds |
 |------|-------|
@@ -44,7 +44,8 @@ A workspace is one boundary of context: a client, an employer, or a standalone e
 Rules that hold in every workspace:
 
 - **Stay inside the current workspace.** Never read or copy notes from another workspace. Client context must not cross.
-- **The workspace `AGENTS.md` wins** on where docs publish, which tools are reachable, and what is confidential.
+- **The workspace `AGENTS.md` wins** on its folder layout, where docs publish, which tools are reachable, and what is confidential. When it maps a path differently (accounts, a prospecting profile, people), use its path in every skill.
+- **People may share a file.** A workspace can keep several people in one file (for example an account's `people.md` or a `contacts.md`), one `## Name - role` section each, instead of one file per person.
 - **No `canonical/` here** (for example, someone else's code repo): the workspace skills ask for context instead. Do not create `canonical/` unless the user asks or runs `new-workspace`.
 - **Never store raw meeting transcripts.** Synthesize them.
 - **Action items live in the issue tracker,** never in people files, project notes, or meeting notes.

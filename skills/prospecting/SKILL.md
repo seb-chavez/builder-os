@@ -7,6 +7,10 @@ description: Use when finding, researching, verifying, or ranking business-devel
 
 Business development. The output is verified prospect files and outreach drafts. The user reviews and sends every message; nothing is sent automatically, and LinkedIn is never automated (its user agreement bans scraping and automated messaging, and the user's own account is usually the main sales channel).
 
+## Paths
+
+The paths below are defaults: the profile `prospecting.md`, the pipeline `accounts/_pipeline.md`, briefs in `accounts/_briefs/`, and one folder per prospect in `accounts/<slug>/`. When the workspace `AGENTS.md` maps any of them elsewhere, use its paths everywhere this skill names them, and pass those paths to the agents.
+
 ## Search budget
 
 Know the cost before starting. Research and verification take about 15 to 30 web searches per prospect, and a session allows about 200 by default, so one session covers 5 to 8 prospects. Above 6, say so before searching: the user can split the run across sessions (the saved brief lets a new session resume) or raise `CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION`. If searches run out mid-run, stop, say which step you reached, and point to the saved brief.
